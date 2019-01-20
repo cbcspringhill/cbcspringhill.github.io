@@ -1,0 +1,1338 @@
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform:rotate(360deg);
+            transform:rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform:rotate(360deg);
+            transform:rotate(360deg);
+  }
+}
+
+
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  fill: currentColor;
+}
+
+.icon__cnt {
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  fill: inherit;
+  pointer-events: none; /* Do not catch pointer events */
+  -webkit-transform: translateX(0);
+          transform: translateX(0); /* Crisp fix for non-retina */
+  -ms-transform: translate(0.5px, -0.3px); /* Crisp fix for IE */
+}
+
+.icon--m {
+  width: 50px;
+  height: 50px;
+}
+
+.icon--l {
+  width: 100px;
+  height: 100px;
+}
+
+.icon--xl {
+  width: 150px;
+  height: 150px;
+}
+
+.icon--xxl {
+  width: 200px;
+  height: 200px;
+}
+
+.icon__spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.icon--ei-spinner .icon__spinner,
+.icon--ei-spinner-2 .icon__spinner {
+  -webkit-animation: spin 1s steps(12) infinite;
+          animation: spin 1s steps(12) infinite;
+}
+
+.icon--ei-spinner-3 .icon__spinner {
+  -webkit-animation: spin 1.5s linear infinite;
+          animation: spin 1.5s linear infinite;
+}
+
+.icon--ei-sc-facebook {
+  fill: #3b5998;
+}
+
+.icon--ei-sc-github {
+  fill: #333;
+}
+
+.icon--ei-sc-google-plus {
+  fill: #dd4b39;
+}
+
+.icon--ei-sc-instagram {
+  fill: #3f729b;
+}
+
+.icon--ei-sc-linkedin {
+  fill: #0976b4;
+}
+
+.icon--ei-sc-odnoklassniki {
+  fill: #ed812b;
+}
+
+.icon--ei-sc-skype {
+  fill: #00aff0;
+}
+
+.icon--ei-sc-soundcloud {
+  fill: #f80;
+}
+
+.icon--ei-sc-tumblr {
+  fill: #35465c;
+}
+
+.icon--ei-sc-twitter {
+  fill: #55acee;
+}
+
+.icon--ei-sc-vimeo {
+  fill: #1ab7ea;
+}
+
+.icon--ei-sc-vk {
+  fill: #45668e;
+}
+
+.icon--ei-sc-youtube {
+  fill: #e52d27;
+}
+
+.icon--ei-sc-pinterest {
+  fill: #bd081c;
+}
+
+.icon--ei-sc-telegram {
+  fill: #0088cc;
+}
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.4.0
+* Docs at http://davidtheclark.github.io/scut
+*/
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type='checkbox'],
+[type='radio'] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.4.0
+* Docs at http://davidtheclark.github.io/scut
+*/
+a {
+  color: inherit;
+  text-decoration: none; }
+  a.inline-link {
+    color: #40709e; }
+    a.inline-link:visited {
+      color: #40709e; }
+    a.inline-link:hover {
+      color: #5080be;
+      text-decoration: underline; }
+    @media (min-width: 37.5em) {
+      a.inline-link--mobile-only {
+        pointer-events: none; } }
+    a.inline-link--light {
+      color: #afafaf; }
+      @media (max-width: 37.5em) {
+        a.inline-link--light {
+          border-bottom: 1px solid #afafaf; } }
+      a.inline-link--light:visited {
+        color: #afafaf; }
+      a.inline-link--light:hover {
+        color: #cfcfcf; }
+
+body {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: center;
+  color: #373737;
+  font-family: 'Ubuntu', sans-serif; }
+
+.no-wrap {
+  white-space: nowrap; }
+
+.Button {
+  padding-top: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  background-color: #40709e;
+  border: 2px solid #40709e;
+  border-radius: 0.25rem;
+  color: #fff;
+  width: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer; }
+  @media (min-width: 37.5em) {
+    .Button {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      width: auto; } }
+  .Button:hover {
+    background-color: #5080be;
+    border-color: #5080be; }
+  .Button--primary {
+    background-color: #40709e;
+    border-color: #40709e; }
+    .Button--primary:hover {
+      background-color: #5080be;
+      border-color: #5080be; }
+  .Button--secondary {
+    background-color: #68a385;
+    border-color: #68a385; }
+    .Button--secondary:hover {
+      background-color: #68b385;
+      border-color: #68b385; }
+  .Button--inverse {
+    background-color: #fff;
+    border-color: #fff;
+    color: #40709e; }
+    .Button--inverse:hover {
+      color: #fff;
+      background-color: #40709e;
+      border-color: #fff; }
+    .Button--inverse.Button--primary {
+      color: #40709e; }
+      .Button--inverse.Button--primary:hover {
+        color: #fff;
+        background-color: #40709e;
+        border-color: #fff; }
+  .Button--skeleton {
+    background-color: #fff;
+    border-color: #373737;
+    color: #373737; }
+    .Button--skeleton:hover {
+      background-color: #373737;
+      color: #fff;
+      border-color: #373737; }
+  .Button--gray {
+    background-color: #afafaf;
+    border-color: #afafaf;
+    color: #fff; }
+    .Button--gray:hover {
+      background-color: #cfcfcf;
+      border-color: #cfcfcf;
+      color: #fff; }
+
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.4.0
+* Docs at http://davidtheclark.github.io/scut
+*/
+.Nav {
+  padding-top: 3.75rem;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 15rem;
+  height: 100vh;
+  z-index: 100;
+  background: #cfcfcf;
+  border: 2px solid #afafaf;
+  border-right-color: transparent;
+  border-radius: 0.25rem 0 0 0.25rem;
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+  right: -15rem; }
+  .menu-open .Nav {
+    right: 0; }
+  .Nav-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .Nav-item {
+    margin-bottom: 1.5rem;
+    padding-top: 0.375rem;
+    padding-right: 0.375rem;
+    padding-bottom: 0.375rem;
+    padding-left: 0.375rem;
+    width: 100%; }
+  .Nav-button {
+    color: #373737;
+    background-color: #fff;
+    border: 2px solid #afafaf;
+    border-radius: 0.25rem;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s; }
+    .Nav-button:hover {
+      color: #fff;
+      background-color: #373737; }
+  .Nav-x {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .Nav-x .icon {
+      cursor: pointer;
+      fill: #40709e; }
+      .Nav-x .icon:hover {
+        fill: #5080be; }
+
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.4.0
+* Docs at http://davidtheclark.github.io/scut
+*/
+.Header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .Header-logo {
+    display: none; }
+    @media (min-width: 37.5em) {
+      .Header-logo {
+        display: initial;
+        margin-top: 0.75rem;
+        margin-bottom: 0.375rem;
+        max-width: 12rem; } }
+    .Header-logo--mobile {
+      margin-left: 0.375rem;
+      width: auto;
+      height: 4rem; }
+      @media (min-width: 37.5em) {
+        .Header-logo--mobile {
+          display: none; } }
+  .Header-buttonContainer {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .Header-button {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    cursor: pointer; }
+  .Header-give {
+    background-color: #68a385;
+    border-color: #68a385; }
+    .Header-give:hover {
+      background-color: #68b385;
+      border-color: #68b385; }
+
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.4.0
+* Docs at http://davidtheclark.github.io/scut
+*/
+.Footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color: #373737;
+  color: #afafaf; }
+  .Footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .Footer-row {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem; }
+  .Footer-callouts {
+    margin-top: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .Footer-callout {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-style: italic; }
+
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.4.0
+* Docs at http://davidtheclark.github.io/scut
+*/
+.beliefs-Hero {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(55, 55, 55, 0.5))), url("/images/open_bible.jpg");
+  background-image: linear-gradient(rgba(55, 55, 55, 0.5)), url("/images/open_bible.jpg");
+  background-position: 50% 40%;
+  background-size: cover; }
+  .beliefs-Hero-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 500; }
+    @media (min-width: 56.25rem) {
+      .beliefs-Hero-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem; } }
+
+.BeliefList {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
+  .BeliefList-beliefs {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60rem;
+    text-align: left; }
+  .BeliefList-belief {
+    margin-bottom: 1.5rem; }
+    .BeliefList-beliefCategory {
+      margin-bottom: 0.75rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      font-size: 1.75rem;
+      line-height: 2rem;
+      font-weight: 500;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      border-radius: 10px;
+      background-color: #cfcfcf;
+      cursor: pointer; }
+      .BeliefList-beliefCategory:hover {
+        background-color: #afafaf; }
+    .BeliefList-beliefDetails {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      height: 0;
+      overflow: hidden; }
+      .open .BeliefList-beliefDetails {
+        height: auto; }
+    .BeliefList-beliefDetail {
+      margin-bottom: 0.75rem; }
+  .BeliefList-icon {
+    color: #40709e; }
+  .open .BeliefList-open {
+    display: none; }
+  .BeliefList-close {
+    display: none; }
+    .open .BeliefList-close {
+      display: inline-block; }
+
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.4.0
+* Docs at http://davidtheclark.github.io/scut
+*/
+.events-Hero {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(55, 55, 55, 0.3))), url("/images/food_event.jpg");
+  background-image: linear-gradient(rgba(55, 55, 55, 0.3)), url("/images/food_event.jpg");
+  background-position: top left;
+  background-size: cover; }
+  .events-Hero-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 500; }
+    @media (min-width: 56.25rem) {
+      .events-Hero-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem; } }
+
+.Event {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
+  @media (min-width: 37.5em) {
+    .Event {
+      padding-bottom: 4.5rem; } }
+  .Event-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 500; }
+    @media (min-width: 56.25rem) {
+      .Event-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem; } }
+  .Event-list {
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+    max-width: 60rem; }
+  .Event-item {
+    margin-bottom: 1.5rem; }
+    .Event-itemTitle {
+      font-size: 1.75rem;
+      line-height: 2rem; }
+    .Event-itemBody {
+      font-size: 1.25rem;
+      line-height: 1.5rem; }
+
+.Calendar {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(55, 55, 55, 0.3))), url("/images/marble_counter.jpg");
+  background-image: linear-gradient(rgba(55, 55, 55, 0.3)), url("/images/marble_counter.jpg");
+  background-position: center;
+  background-size: cover; }
+  .Calendar-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 500; }
+    @media (min-width: 56.25rem) {
+      .Calendar-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem; } }
+  .Calendar-desk {
+    display: none; }
+    @media (min-width: 56.25rem) {
+      .Calendar-desk {
+        display: initial; } }
+  @media (min-width: 56.25rem) {
+    .Calendar-palm {
+      display: none; } }
+
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.4.0
+* Docs at http://davidtheclark.github.io/scut
+*/
+.home-Hero {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #fff;
+  padding-top: 6rem;
+  padding-bottom: 18rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(55, 55, 55, 0.4))), url("/images/front_row_view_m.jpg");
+  background-image: linear-gradient(rgba(55, 55, 55, 0.4)), url("/images/front_row_view_m.jpg");
+  background-position: 20% 0%;
+  background-size: cover; }
+  @media (min-width: 37.5em) {
+    .home-Hero {
+      padding-top: 12rem;
+      padding-bottom: 12rem;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(55, 55, 55, 0.4))), url("/images/front_row_view.jpg");
+      background-image: linear-gradient(rgba(55, 55, 55, 0.4)), url("/images/front_row_view.jpg");
+      background-position: center;
+      background-size: cover; } }
+  .home-Hero-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 500; }
+    @media (min-width: 56.25rem) {
+      .home-Hero-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem; } }
+  .home-Hero-body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem; }
+    @media (min-width: 56.25rem) {
+      .home-Hero-body {
+        font-size: 1.75rem;
+        line-height: 2rem; } }
+
+.Logistics {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+  background-color: #fff;
+  color: #373737; }
+  .Logistics-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 500; }
+    @media (min-width: 56.25rem) {
+      .Logistics-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem; } }
+  .Logistics-body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.75rem; }
+    .Logistics-body a:hover {
+      text-decoration: underline; }
+
+.Expect {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(80%, #fff)), url("/images/sanctuary_empty_m.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0), #fff 80%), url("/images/sanctuary_empty_m.jpg");
+  background-repeat: no-repeat;
+  background-position: top; }
+  @media (min-width: 37.5em) {
+    .Expect {
+      background-image: url("/images/sanctuary_empty.jpg");
+      background-position: 90% 40%; } }
+  .Expect-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: #fff; }
+    @media (min-width: 56.25rem) {
+      .Expect-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem; } }
+  .Expect-steps {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (max-width: 37.5em) {
+      .Expect-steps {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
+    @media (min-width: 37.5em) {
+      .Expect-steps {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
+  .Expect-step {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0.75rem;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+    @media (min-width: 37.5em) {
+      .Expect-step {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        -ms-flex-preferred-size: 38%;
+            flex-basis: 38%; } }
+    @media (min-width: 56.25rem) {
+      .Expect-step {
+        -ms-flex-preferred-size: 25%;
+            flex-basis: 25%; } }
+    .Expect-stepTitle {
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      font-weight: 500; }
+
+.Reference {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: #fff;
+  color: #373737; }
+  .Reference-verse {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 500; }
+  .Reference-label {
+    margin-bottom: 3rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 500; }
+  .Reference-link {
+    margin-top: 0.75rem;
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
+    margin-left: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 500; }
+    @media (min-width: 56.25rem) {
+      .Reference-link {
+        width: 12rem; } }
+
+.Staff {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-image: url("/images/stage_backdrop.jpg");
+  background-size: cover;
+  background-position: center; }
+  .Staff-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: #fff; }
+    @media (min-width: 56.25rem) {
+      .Staff-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem; } }
+  .Staff-body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    padding-top: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0.75rem;
+    background-color: #fff;
+    border-radius: 10px; }
+  .Staff-members {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media (min-width: 56.25rem) {
+      .Staff-members {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; } }
+    @media (min-width: 75rem) {
+      .Staff-members {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; } }
+  .Staff-member {
+    padding-top: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0.75rem;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media (min-width: 37.5em) {
+      .Staff-member {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem; } }
+    .Staff-memberImage {
+      max-width: 8rem;
+      max-height: 10rem; }
+    .Staff-memberTextContainer {
+      padding-left: 0.75rem;
+      text-align: left;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 6rem; }
+      @media (min-width: 37.5em) {
+        .Staff-memberTextContainer {
+          width: 8rem; } }
+    @media (max-width: 37.5em) {
+      .Staff-memberFirst {
+        font-weight: 500; } }
+    @media (min-width: 37.5em) {
+      .Staff-memberFirst {
+        font-size: 1.75rem;
+        line-height: 2rem; } }
+    .Staff-memberLast {
+      margin-bottom: 0.75rem; }
+      @media (max-width: 37.5em) {
+        .Staff-memberLast {
+          font-weight: 500; } }
+      @media (min-width: 37.5em) {
+        .Staff-memberLast {
+          font-size: 1.75rem;
+          line-height: 2rem; } }
+
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.4.0
+* Docs at http://davidtheclark.github.io/scut
+*/
+.kids-Hero {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(55, 55, 55, 0.4))), url("/images/shepherd_sheep.jpg");
+  background-image: linear-gradient(rgba(55, 55, 55, 0.4)), url("/images/shepherd_sheep.jpg");
+  background-size: cover;
+  background-position: top; }
+  .kids-Hero-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 500; }
+    @media (min-width: 56.25rem) {
+      .kids-Hero-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem; } }
+  .kids-Hero-body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem; }
+    @media (min-width: 56.25rem) {
+      .kids-Hero-body {
+        font-size: 1.75rem;
+        line-height: 2rem; } }
+
+.Kids {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  position: relative;
+  padding-bottom: 23rem; }
+  .Kids-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 500; }
+    @media (min-width: 56.25rem) {
+      .Kids-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem; } }
+  .Kids-body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem; }
+  .Kids-details {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 45rem; }
+  .Kids-detail:not(:last-child) {
+    margin-bottom: 1.5rem; }
+  .Kids::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20rem;
+    background-image: url("/images/kids_art.jpg");
+    background-size: cover;
+    background-position: center; }
+
+.Midweek {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
+  .Midweek-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 500; }
+    @media (min-width: 56.25rem) {
+      .Midweek-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem; } }
+  .Midweek-body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem; }
+  .Midweek-details {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 45rem; }
+  .Midweek-detail:not(:last-child) {
+    margin-bottom: 1.5rem; }
+
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.4.0
+* Docs at http://davidtheclark.github.io/scut
+*/
+.ministries-Hero {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #fff; }
+  .ministries-Hero-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 500; }
+    @media (min-width: 56.25rem) {
+      .ministries-Hero-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem; } }
+  .ministries-Hero-body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem; }
+    @media (min-width: 56.25rem) {
+      .ministries-Hero-body {
+        font-size: 1.75rem;
+        line-height: 2rem; } }
+
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.4.0
+* Docs at http://davidtheclark.github.io/scut
+*/
+.smcx-embed {
+  max-width: 100% !important;
+  height: 600px !important; }
+
+.smcx-embed > .smcx-iframe-container {
+  max-width: 100% !important;
+  height: 600px !important; }

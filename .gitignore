@@ -1,0 +1,13 @@
+# ignore all the shared scss files
+stylesheets/shared
+
+# ignore the helper scss files
+stylesheets/global
+stylesheets/normalize
+
+# ignore each page's index scss
+stylesheets/**/index
+
+# ignore all js except site.js
+*.js
+!site.js
