@@ -478,6 +478,16 @@ a {
         color: #afafaf; }
       a.inline-link--light:hover {
         color: #cfcfcf; }
+    a.inline-link--white {
+      color: #fff; }
+      @media (max-width: 37.5em) {
+        a.inline-link--white {
+          border-bottom: 1px solid #fff; } }
+      a.inline-link--white:visited {
+        color: #fff; }
+      a.inline-link--white:hover {
+        color: #fff;
+        text-decoration: underline; }
 
 body {
   font-size: 1rem;
@@ -486,8 +496,31 @@ body {
   color: #373737;
   font-family: 'Ubuntu', sans-serif; }
 
+/* utility classes */
+.bold {
+  font-weight: 500; }
+
 .no-wrap {
   white-space: nowrap; }
+
+.small {
+  font-size: 1.25rem;
+  line-height: 1.5rem; }
+
+.underline {
+  text-decoration: underline; }
+
+.Box {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75rem; }
+  .Box--content {
+    max-width: 60rem; }
+  .Box-footer {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    border-radius: 10px; }
 
 .Button {
   padding-top: 0.75rem;
@@ -552,6 +585,54 @@ body {
       background-color: #cfcfcf;
       border-color: #cfcfcf;
       color: #fff; }
+
+.section {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem; }
+  @media (min-width: 37.5em) {
+    .section {
+      padding-top: 3rem;
+      padding-bottom: 3rem; } }
+  .section h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 500; }
+    @media (min-width: 37.5em) {
+      .section h1 {
+        margin-bottom: 3rem; } }
+  .section p {
+    text-align: left; }
+
+.Hero {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #fff; }
+  .Hero-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 500; }
+    @media (min-width: 56.25rem) {
+      .Hero-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem; } }
+  .Hero-body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem; }
+    @media (min-width: 56.25rem) {
+      .Hero-body {
+        font-size: 1.75rem;
+        line-height: 2rem; } }
 
 /*
 * Scut, a collection of Sass utilities
@@ -717,31 +798,11 @@ body {
     line-height: 1.25rem;
     font-style: italic; }
 
-/*
-* Scut, a collection of Sass utilities
-* to ease and improve our implementations of common style-code patterns.
-* v1.4.0
-* Docs at http://davidtheclark.github.io/scut
-*/
 .beliefs-Hero {
-  padding-top: 12rem;
-  padding-bottom: 12rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  color: #fff;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(55, 55, 55, 0.5))), url("/images/open_bible.jpg");
   background-image: linear-gradient(rgba(55, 55, 55, 0.5)), url("/images/open_bible.jpg");
   background-position: 50% 40%;
   background-size: cover; }
-  .beliefs-Hero-title {
-    margin-bottom: 1.5rem;
-    font-size: 1.75rem;
-    line-height: 2rem;
-    font-weight: 500; }
-    @media (min-width: 56.25rem) {
-      .beliefs-Hero-title {
-        font-size: 2.25rem;
-        line-height: 2.5rem; } }
 
 .BeliefList {
   padding-top: 3rem;
@@ -796,31 +857,11 @@ body {
     .open .BeliefList-close {
       display: inline-block; }
 
-/*
-* Scut, a collection of Sass utilities
-* to ease and improve our implementations of common style-code patterns.
-* v1.4.0
-* Docs at http://davidtheclark.github.io/scut
-*/
 .events-Hero {
-  padding-top: 12rem;
-  padding-bottom: 12rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  color: #fff;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(55, 55, 55, 0.3))), url("/images/food_event.jpg");
   background-image: linear-gradient(rgba(55, 55, 55, 0.3)), url("/images/food_event.jpg");
   background-position: top left;
   background-size: cover; }
-  .events-Hero-title {
-    margin-bottom: 1.5rem;
-    font-size: 1.75rem;
-    line-height: 2rem;
-    font-weight: 500; }
-    @media (min-width: 56.25rem) {
-      .events-Hero-title {
-        font-size: 2.25rem;
-        line-height: 2.5rem; } }
 
 .Event {
   padding-top: 3rem;
@@ -842,6 +883,7 @@ body {
   .Event-list {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 3rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -851,6 +893,8 @@ body {
             flex-direction: column;
     text-align: left;
     max-width: 60rem; }
+    .Event-list:last-child {
+      margin-bottom: 0; }
   .Event-item {
     margin-bottom: 1.5rem; }
     .Event-itemTitle {
@@ -888,18 +932,7 @@ body {
     .Calendar-palm {
       display: none; } }
 
-/*
-* Scut, a collection of Sass utilities
-* to ease and improve our implementations of common style-code patterns.
-* v1.4.0
-* Docs at http://davidtheclark.github.io/scut
-*/
 .home-Hero {
-  padding-top: 12rem;
-  padding-bottom: 12rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  color: #fff;
   padding-top: 6rem;
   padding-bottom: 18rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(55, 55, 55, 0.4))), url("/images/front_row_view_m.jpg");
@@ -914,25 +947,6 @@ body {
       background-image: linear-gradient(rgba(55, 55, 55, 0.4)), url("/images/front_row_view.jpg");
       background-position: center;
       background-size: cover; } }
-  .home-Hero-title {
-    margin-bottom: 1.5rem;
-    font-size: 1.75rem;
-    line-height: 2rem;
-    font-weight: 500; }
-    @media (min-width: 56.25rem) {
-      .home-Hero-title {
-        font-size: 2.25rem;
-        line-height: 2.5rem; } }
-  .home-Hero-body {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 60rem;
-    font-size: 1.25rem;
-    line-height: 1.5rem; }
-    @media (min-width: 56.25rem) {
-      .home-Hero-body {
-        font-size: 1.75rem;
-        line-height: 2rem; } }
 
 .Logistics {
   padding-top: 3rem;
@@ -1186,41 +1200,11 @@ body {
           font-size: 1.75rem;
           line-height: 2rem; } }
 
-/*
-* Scut, a collection of Sass utilities
-* to ease and improve our implementations of common style-code patterns.
-* v1.4.0
-* Docs at http://davidtheclark.github.io/scut
-*/
 .kids-Hero {
-  padding-top: 12rem;
-  padding-bottom: 12rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  color: #fff;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(55, 55, 55, 0.4))), url("/images/shepherd_sheep.jpg");
   background-image: linear-gradient(rgba(55, 55, 55, 0.4)), url("/images/shepherd_sheep.jpg");
   background-size: cover;
   background-position: top; }
-  .kids-Hero-title {
-    margin-bottom: 1.5rem;
-    font-size: 1.75rem;
-    line-height: 2rem;
-    font-weight: 500; }
-    @media (min-width: 56.25rem) {
-      .kids-Hero-title {
-        font-size: 2.25rem;
-        line-height: 2.5rem; } }
-  .kids-Hero-body {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 60rem;
-    font-size: 1.25rem;
-    line-height: 1.5rem; }
-    @media (min-width: 56.25rem) {
-      .kids-Hero-body {
-        font-size: 1.75rem;
-        line-height: 2rem; } }
 
 .Kids {
   padding-top: 3rem;
@@ -1297,38 +1281,6 @@ body {
 * v1.4.0
 * Docs at http://davidtheclark.github.io/scut
 */
-.ministries-Hero {
-  padding-top: 12rem;
-  padding-bottom: 12rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  color: #fff; }
-  .ministries-Hero-title {
-    margin-bottom: 1.5rem;
-    font-size: 1.75rem;
-    line-height: 2rem;
-    font-weight: 500; }
-    @media (min-width: 56.25rem) {
-      .ministries-Hero-title {
-        font-size: 2.25rem;
-        line-height: 2.5rem; } }
-  .ministries-Hero-body {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 60rem;
-    font-size: 1.25rem;
-    line-height: 1.5rem; }
-    @media (min-width: 56.25rem) {
-      .ministries-Hero-body {
-        font-size: 1.75rem;
-        line-height: 2rem; } }
-
-/*
-* Scut, a collection of Sass utilities
-* to ease and improve our implementations of common style-code patterns.
-* v1.4.0
-* Docs at http://davidtheclark.github.io/scut
-*/
 .smcx-embed {
   max-width: 100% !important;
   height: 600px !important; }
@@ -1336,3 +1288,15 @@ body {
 .smcx-embed > .smcx-iframe-container {
   max-width: 100% !important;
   height: 600px !important; }
+
+.lego-Hero {
+  background-image: url("/images/lego_my_eggo.png");
+  background-size: cover;
+  background-position: center; }
+
+.Lego-rsvp {
+  width: 320px;
+  height: 840px; }
+  @media screen and (min-width: 640px) {
+    .Lego-rsvp {
+      width: 640px; } }
